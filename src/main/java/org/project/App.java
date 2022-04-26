@@ -1,7 +1,9 @@
 package org.project;
 
-public class App {
+import static spark.Spark.staticFileLocation;
+
+public class App { //responsible for the front-end user interface of the application.
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
+        staticFileLocation("/public");
+        String layout = "templates/layout.vtl";    }
 }
